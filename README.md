@@ -187,20 +187,28 @@ successful trading parameters can be found below:
     "tradeParameters": {
         "tickerInterval": "fiveMin",
         "buy": {
-            "btcAmount": 0.001,
+            "btcAmount": 0.02,
             "rsiThreshold": 20,
             "24HourVolumeThreshold": 25,
             "minimumUnitPrice": 0.00001,
-            "maxOpenTrades": 3
+            "maxOpenTrades": 2
         },
         "sell": {
-            "lossMarginThreshold": -2.5,
+            "lossMarginThreshold": -4,
             "rsiThreshold": 50,
-            "minProfitMarginThreshold": 0.5,
+            "minProfitMarginThreshold": 1.5,
             "profitMarginThreshold": 2.5
         }
     },
-    "pauseParameters": {}
+    "pauseParameters": {
+"buy": {
+"rsiThreshold": 0,
+"pauseTime": 0
+},
+"sell": {
+"profitMarginThreshold": 0,
+"pauseTime": 0
+}}
 }
 ```
 
